@@ -1,0 +1,18 @@
+[project]
+name = "src"
+version = "0.0.1"
+description = "An MLOps project for production models"
+authors = [
+    { name = "Anubhav Trivedi", email = "anubhav.trivedi@gmail.com" }
+]
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+packages = { find = {} }
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
